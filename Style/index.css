@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800;900&display=swap');
+
+:root {
+    --background-color: #333647;
+    --pink-color: #f87652;
+    --secondary-color:#bbbbbb;
+    --bg-color-of-lists-skills-section: #81818180;
+
+    --bg-color-for-form-inputs: #ffffff24;
+    --border-color-for-form-inputs: #c4c4c44a;
+}
+
+* 
+{
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    background-color: var(--background-color) !important;
+}
+h1,h2,h3,h4,h5,h6, p, span,td, a
+{
+    cursor: pointer;
+}
+
+/* Navbar */
+.nav_section .navbar-brand
+{
+    font-size: 22px;
+    position: fixed;
+    margin-left: -110px;
+}
+
+
+ .nav_section .navbar-brand span
+{
+    color: var(--pink-color);
+}
+
+.nav_section .navbar-nav li
+{
+    margin: 0px 8px;
+    margin-left: 30px;
+    /* position: fixed; 
+    top: 0; left: 0; 
+    z-index: 9999; 
+    width: 100%; */
+    
+}
+.nav_section .navbar-nav li a
+{
+    color: white !important;
+    font-size: 15px;
+}
+.nav_section .navbar-nav .nav-link::before
+{
+    content: '';
+    width: 0px;
+    height: 2px;
+    background-color: white;
+    position: relative;
+    bottom: 7px;
+    transition: 0.5s;
+}
+.nav_section .navbar-nav .nav-link:hover::before
+{
+    content: '';
+    height: 2px;
+    width: 17px;
+    background-color: white;
+    position: relative;
+    bottom: 7px;
+} 
+
+/* Profile Section */
+.profile_section .row
+{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+
+}
+.profile_section .row h1,h2,h3,p
+{
+    color: white;
+}
+.profile_section .row h3
+{
+   font-size: 19px;
+   font-weight: 300;
+   margin-bottom: 15px;
+}
+.profile_section .row h3::after 
+{
+    content: '';
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    width: 90px;
+    height: 2px;
+    background-color: white;
+    margin-left: 6px;
+}
+.profile_section .row h1
+{
+    font-size: 65px;
+    font-weight: 800;
+}
+.profile_section .row h2
+{
+    font-size: 20px;
+    font-weight: 100;
+    margin: 8px 0px;
+}
+
+
+.profile_section .row .dynamic-txts
+{
+    /* margin-bottom: 2px; */
+    margin-top: 20px;
+    /* margin-top: 25px; */
+    margin-left: 15px;
+    /* margin: 15px 8px; */
+    height: 45px;
+   /* line-height: 40px; */
+   overflow: hidden;
+   
+}
+.profile_section .row .dynamic-txts li {
+    font-family: var(--body-font);
+   color: white;
+   font-size: 30px;
+   font-weight: 500;
+   position: relative;
+   top: 0;
+   animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+    100%{
+      top: -200px;
+    }
+  }
+  .profile_section .row .dynamic-txts li span {
+    position: relative;
+    margin: 5px 0;
+    line-height: 49.8px;
+  }
+.profile_section .row .dynamic-txts li span:after {
+    content: "";
+   position: absolute;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background: #333647;
+   border-left: 2px solid rgb(204, 65, 88);
+   animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+    40%, 60%{
+      left: calc(100% + 30px);
+    }
+    100%{
+      left: 0;
+    }
+  }
+
+
+/* .profile_section .row p
+{
+    font-size: 13px;
+    margin-top: 13px;
+    line-height: 21px;
+    color: var(--secondary-color);
+} */
+.profile_section .row button 
+{
+    border-radius: 10px;
+    font-size: 19px;
+    color: white;
+    background-color: var(--pink-color);
+    border: 3px solid var(--pink-color);
+    width: 113px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+}
+.profile_section .row button:hover
+{
+    animation: swing;
+    animation-duration: 0.5s;
+    background-color: white;
+    color: black;
+    border-color: white;
+}
+.profile_section .row img
+{
+    width: 80%;
+
+}
+/* ParticleJS*/
+canvas.particles-js-canvas-el
+{
+    position: absolute;
+    height: 100% !important;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1000;
+    margin: 0px;
+}
+
+@media (max-width: 1200px) and (min-width: 993px)
+{
+    .profile_section .row h1
+    {
+        font-size: 58px;
+    }   
+}
+@media (max-width: 993px) and (min-width: 763px)
+{
+    .profile_section .row h1
+    {
+        font-size: 42px;
+    }
+    .profile_section .row h2
+    {
+        font-size: 15px;
+    }
+    .profile_section .row p
+    {
+        font-size: 11px;
+    }
+    .profile_section .row h3
+    {
+        font-size: 15px;
+    }
+    .profile_section .row button
+    {
+        font-size: 15px;
+    }
+}
+@media (max-width: 763px) and (min-width: 500px)
+{
+    .profile_section
+    {
+        margin: 135px 0px;
+    }
+    .profile_section .row h1
+    {
+        font-size: 46px;
+        text-align: center;
+    }
+    .profile_section .row h2
+    {
+        font-size: 15px;
+        text-align: center;
+    }
+    .profile_section .row p
+    {
+        font-size: 11px;
+        text-align: center;
+    }
+    .profile_section .btn_container
+    {
+        justify-content: center;
+        text-align: center;
+    }
+    .profile_section .row h3
+    {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    .profile_section .row h3::after
+    {
+        width: 0px;
+    }
+    .profile_section .btn_container button
+    {
+        width: 100px;
+        height: 43px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .profile_section img
+    {
+        width: 60%;
+        margin-top: 20px;
+    }
+}
+
+/* About US Section */
+.about_section
+{
+    background-color: #282A39;
+    padding: 170px 0px;
+}
+.about_section #heading 
+{
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: 0.5px;
+    line-height: 57px;
+}
+.about_section .lets_talk
+{
+    color: white;
+    font-weight: 400;
+    margin-top: 40px;
+}
+.about_section #email
+{
+    font-weight: 100;
+    font-size: 15px;
+    color: var(--pink-color);
+    margin-top: 35px;
+    word-spacing: 6px;
+}
+.about_section .contact_info
+{
+    margin-top: 15px;
+
+}
+.about_section .contact_info h5
+{
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    word-spacing: 6px;
+}
+.about_section .about_me_right_section #txt
+{
+    font-size: 15px;
+    margin-top: 13px;
+    line-height: 25px;
+    color: var(--secondary-color);
+}
+.about_section .about_me_right_section hr
+{
+    margin: 0px;
+    border: 05px solid var(--pink-color);
+    width: 6rem;
+}
+.about_section .about_me_right_section table td
+{
+    border: none;
+    color: white;
+    font-size: 13px;
+}
+.about_section .about_me_right_section button
+{
+    border-radius: 7px;
+    font-size: 15px;
+    color: white;
+    background-color: var(--pink-color);
+    border: 3px solid var(--pink-color);
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+}
+.about_section .about_me_right_section button:hover
+{
+    animation: swing;
+    animation-duration: 0.5s;
+}
+@media (max-width:993px) and (min-width: 768px)
+{
+    .about_section .about_me_right_section #txt
+    {
+        font-size: 12px;
+    }
+    .about_section #heading 
+    {
+        font-size: 28px;
+    }
+}
+
+
+/* Skills Section */
+.skills_section
+{
+    padding: 100px 0px;
+}
+.skills_section_left_section
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.skills_section #heading
+{
+    font-weight: 600;
+    font-size: 50px;
+}
+.skills_section hr
+{
+    border: 0.5px solid var(--pink-color);
+    width: 6erm;
+    margin: 12px 0px;
+}
+.skills_section p
+{
+    color: var(--secondary-color);
+    font-size: 13px;
+}
+.skills_section .social_media_icons .list-group-item
+{
+    border: none;
+    color: white ;
+    border-left: 2px solid var(--pink-color);
+    border-radius: 0px;
+    margin: 5px 0px;
+    width: 208px;
+    background: var(--bg-color-of-lists-skills-section);
+    font-size: 14px;
+}
+.skills_section .social_media_icons .list-group-item a
+{
+    transition: 0.5s;
+    
+}
+.skills_section .social_media_icons .list-group-item:hover a
+{
+    margin-left: 10px;
+}
+.skills_section_right_section .each_skills
+{
+    margin: 25px 0px;
+}
+.skills_section_right_section .each_skills span
+{
+    color:white;
+    font-size: 14px;
+}
+.skills_section_right_section .each_skills .progress
+{
+    background-color: var(--bg-color-of-lists-skills-section);
+    border-radius: 100px;
+    margin-top: 3px;
+    height: 10px;
+}
+.skills_section_right_section .each_skills .progress-bar
+{
+    background-color: var(--pink-color) !important;
+    color: transparent;
+}
+
+/* Protfolio Section */
+.protfolio_section
+{
+    background: #282A39;
+    padding: 200px 0px;
+}
+.protfolio_section .nav-tabs
+{
+    border: none;
+    width: 30%;
+    text-align: center;
+}
+.protfolio_section .nav-tabs .nav-link.active
+{
+    border: none;
+    color: white;
+    border-bottom: 2px solid var(--pink-color) !important;
+    background: transparent;
+}
+.protfolio_section .nav-tabs .nav-link.active:hover
+{
+    border-bottom: 2px solid var(--pink-color) !important;
+}
+.protfolio_section .nav-tabs .nav-item.show .nav-link.active
+{
+    font-weight: 400;
+    font-size: 14px;
+    background: transparent !important;
+}
+.protfolio_section .nav-tabs .nav-link:hover
+{
+    border: none;
+}
+.protfolio_section .tab-content .card img
+{
+  border: 2px white;
+}
+
+/* Contact_section */
+.contact_section
+{
+    background: #282A39;
+    padding-bottom: 100px;
+}
+.contact_section .heading
+{
+    font-weight: 600;
+    font-size: 50px;
+}
+.contact_section hr
+{
+    border: 0.5px solid var(--pink-color);
+    width: 6rem;
+    margin: 10px 0px;
+}
+.contact_section .txt
+{
+    color: var(--secondary-color);
+    font-size: 13px;
+}
+.contact_section form .form-control
+{
+    background: var(--bg-color-for-form-inputs);
+    border: 2px solid var(--bg-color-for-form-inputs);
+    border-radius: 0px;
+    color: white;
+}
+.contact_section form button
+{
+    background-color: var(--pink-color);
+    border: 2px solid var(--pink-color);
+    color: white;
+    width: 100px;
+    font-size: 15px;
+}
+.contact_section form button:hover
+{
+    animation: swing;
+    animation-duration: 0.5s;
+}
+
+.contact_section ul li
+{
+    color: white;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+.contact_section ul li .fa
+{
+    color: var(--pink-color);
+}
+
+@media (max-width: 991px) and (min-width: 768px)
+{
+    .contact_section .heading
+    {
+        font-size: 42px;
+    }
+}
+
+/* footer area */
+.footer_area
+{
+    background: #282A39;
+    border-top: 2px solid var(--bg-color-for-form-inputs);
+    padding: 40px 0px;
+}
+.footer_area .navbar-brand
+{
+    font-size: 23px;
+}
+.footer_area p
+{
+    margin-top: 13px;
+    color: var(--secondary-color);
+    font-size: 12px;
+}
+.footer_area .logo-area .fa
+{
+    color: var(--pink-color);
+    font-size: 17px !important;
+    border: 2px solid var(--pink-color);
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+.footer_area .logo-area .fa:hover
+{
+    animation: swing;
+    animation-duration: 0.5s;
+    background: white;
+}
+.footer_area .row .column .heading
+{
+    font-weight: 400;
+    font-size: 21px;
+    color: white;   
+}
+.footer_area .list-group .list-group-item
+{
+    margin: -3px 0px;
+    color: white;
+    transition: 0.5s !important;
+}
+.footer_area .list-group .list-group-item i
+{
+    font-size: 10px;
+    color: var(--pink-color);
+    transition: 0.5s;
+}
+.footer_area .list-group .list-group-item:hover i
+{
+    padding-right: 10px;
+}
+
+@media (max-width: 767px) and (min-width: 500px)
+{
+    .footer_area .links
+    {
+        margin-bottom: 30px;
+    }
+    .footer_area .row .column .heading
+    {
+        font-size: 17px !important;
+    }
+    .protfolio_section .list-group
+    {
+        margin-bottom: 30px;
+    }
+    .protfolio_section .list-group .list-group-item
+    {
+        font-size: 13px;
+    }
+}
